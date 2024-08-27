@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { User } from "@/types/type";
 import "../../styles/dropdown.scss";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { toast } from "sonner";
 import axios from "axios";
 import { base_Url } from "@/api/baseUrl";
@@ -35,10 +34,7 @@ type Props = {
 const HomeDropdown = ({ user }: Props) => {
   return (
     <div className="dropdown-container">
-      <Avatar className="user-avatar">
-        <AvatarImage src={user.image} />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
+      <img src={(user?.image || "/user.png")} alt="user avatar" className="avatar" />
       <div className="dropdown dropdown-hover">
         <div tabIndex={0} role="button" className="dd-name">
           {user.username}
