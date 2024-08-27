@@ -12,6 +12,7 @@ import connectUserDb from "./lib/db/Usersdb";
 import { app, server } from "./Socket/Socket";
 
 
+
 dotenv.config();
 
 cloudinary.config({
@@ -20,8 +21,11 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const port = process.env.PORT || 5000 ;
+const port = process.env.PORT || 4000 ;
 app.use(cors({ origin: 'http://localhost:3000', credentials: true })); 
+
+
+
 
 app.use(express.json({limit:"5mb"}));  // parse req.body
 app.use(express.urlencoded({ extended: true }));
