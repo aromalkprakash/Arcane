@@ -25,13 +25,13 @@ export const googleLogin = async (req: Request, res: Response) => {
       return res.status(400).json({ message: "No code provided" });
     }
 
-    // console.log("Received auth code:", code);
+    console.log("Received auth code:", code);
 
     // Exchange the authorization code for tokens
     const googleRes= await oauth2client.getToken(code);
     oauth2client.setCredentials(googleRes.tokens);
 
-    // console.log("Google tokens received:", googleRes.tokens);
+    console.log("Google tokens received:", googleRes.tokens);
 
     // Fetch user info from Google
     const userRes = await axios.get(
