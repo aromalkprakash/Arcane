@@ -40,7 +40,7 @@ app.use("/api/chat", chatRoutes);
 
 
 server.listen(PORT, () => {
-  console.log(`Users server listening on port ${port}`);
+  console.log(`Users server listening on port ${PORT}`);
 });
 
 connectUserDb();
