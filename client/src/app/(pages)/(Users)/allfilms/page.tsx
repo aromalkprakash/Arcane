@@ -2,7 +2,7 @@
 
 import { getAllMovies } from "@/api/movieUrl";
 import { MovieT } from "@/types/type";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import "../../../../styles/allMovies.scss";
 import AllMoviesList from "@/components/User/AllMovies/AllMovieList";
 import { useSearchParams } from "next/navigation";
@@ -81,4 +81,13 @@ const AllMoviesPage = () => {
   );
 };
 
-export default AllMoviesPage;
+
+const All_MovieWrapper = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AllMoviesPage />
+    </Suspense>
+  );
+};
+
+export default All_MovieWrapper;

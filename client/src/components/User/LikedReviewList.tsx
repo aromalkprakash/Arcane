@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FReview } from "@/types/type";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,10 +72,7 @@ const LikedreviewList: React.FC<FUR_All_ListProps> = ({ review }) => {
             <div className="movie-info">
               <div className="user-info">
                 <Link href={`/profile/${review.user?.username}`}>
-                  <Avatar className="user-avatar w-10 h-10 border">
-                    <AvatarImage src={review.user?.image} />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
+                <img src={(review.user?.image || "/user.png")} alt="user avatar" className="avatar" />
                 </Link>
               
                 <Link href={`/profile/${review.user?.username}`}>

@@ -2,7 +2,7 @@
 
 import { GetAllUsers } from "@/api/userUrl";
 import { User } from "@/types/type";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import "../../../../styles/AllUsers.scss";
 import AllUsersList from "@/components/User/AllUsers/AllUsersList";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -85,4 +85,12 @@ const AllUsers = () => {
   );
 };
 
-export default AllUsers;
+const All_UsersWrapper = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AllUsers />
+    </Suspense>
+  );
+};
+
+export default All_UsersWrapper;
