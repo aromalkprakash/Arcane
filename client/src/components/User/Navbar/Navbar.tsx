@@ -58,7 +58,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="navbar-header">
         <Link href="/" className="navbar-logo">
-          wwhwhhwh
+          arcane
         </Link>
         <div className="navbar-links">
           <Dropdown user={user} />
