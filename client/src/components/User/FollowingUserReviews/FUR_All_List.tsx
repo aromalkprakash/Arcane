@@ -59,7 +59,7 @@ const FUR_All_List: React.FC<FUR_All_ListProps> = ({ review }) => {
 
   return (
     <div key={review._id} className="review-item">
-      <div className="container px-1 md:px-6">
+      <div className="front-fur-review-container px-1 md:px-6">
         <div className="mb-8 md:mb-12"></div>
         <div className="grid gap-6">
           <div className="flex gap-4">
@@ -85,13 +85,13 @@ const FUR_All_List: React.FC<FUR_All_ListProps> = ({ review }) => {
                 </Link>
               
                 <Link href={`/profile/${review.user?.username}`}>
-                  <h3 className="fullname">{review.user?.fullName}</h3>
+                  <h3 className="front-fur-review-fullname">{review.user?.fullName}</h3>
                 </Link>
            
               </div>
               <div>
                 <Link href={`/film/${review.movie._id}`}>
-                  <h1 className="movie-title">{review.movie?.title}</h1>
+                  <h1 className="front-fur-review-movie-title">{review.movie?.title}</h1>
                 </Link>
               </div>
 
@@ -101,7 +101,7 @@ const FUR_All_List: React.FC<FUR_All_ListProps> = ({ review }) => {
                 </div>
               )}
               
-              <p className="review-text">
+              <p className="front-fur-review-text">
                 {isExpanded || !isLongReview ? review.review?.review : truncateText(review.review?.review, 100)}
               
                 {isLongReview && (

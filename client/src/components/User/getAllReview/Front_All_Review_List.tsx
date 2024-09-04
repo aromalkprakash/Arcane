@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import "../../../styles/front-fur.scss";
+import "../../../styles/front-all.scss";
 import { FReview } from "@/types/type";
 
 interface All_Review_ListProps {
@@ -20,7 +20,7 @@ const Front_All_Review_List: React.FC<All_Review_ListProps> = ({ review }) => {
 
   return (
     <div key={review._id} className="review-item">
-      <div className="container px-1 md:px-6">
+      <div className="front-all-review-container px-1 md:px-6">
         <div className="mb-8 md:mb-12"></div>
         <div className="grid gap-6">
           <div className="flex gap-4">
@@ -36,7 +36,7 @@ const Front_All_Review_List: React.FC<All_Review_ListProps> = ({ review }) => {
                 />
               </div>
             </Link>
-            <div className="movie-info">
+            <div className="front-all-review-movie-info">
               <div className="user-info">
                 <Link href={`/profile/${review.user?.username}`}>
                   <div>
@@ -44,12 +44,12 @@ const Front_All_Review_List: React.FC<All_Review_ListProps> = ({ review }) => {
                   </div>
                 </Link>
                 <Link href={`/profile/${review.user?.username}`}>
-                  <h3 className="fullname">{review.user?.fullName}</h3>
+                  <h3 className="front-all-review-fullname">{review.user?.fullName}</h3>
                 </Link>
               </div>
               <div>
                 <Link href={`/film/${review.movie?._id}`}>
-                  <h1 className="movie-title">{review.movie?.title}</h1>
+                  <h1 className="front-all-review-movie-title">{review.movie?.title}</h1>
                 </Link>
               </div>
               {review.rating > 0 && (
@@ -57,7 +57,7 @@ const Front_All_Review_List: React.FC<All_Review_ListProps> = ({ review }) => {
                   <FaStar size={15} color="gold" /> <span className="rating">{review.rating}/10</span>
                 </div>
               )}
-              <p className="review-text">
+              <p className="front-all-review-review-text">
                 {isExpanded || !isLongReview ? review.review : truncateText(review.review, 100)}
                 {isLongReview && (
                   <button

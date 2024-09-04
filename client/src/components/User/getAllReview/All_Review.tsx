@@ -31,7 +31,7 @@ const All_Review_Four: React.FC = () => {
         <div className="loader"></div>
       ) : (
         <div>
-          <h1 className="following-review-title">Latest Reviews</h1>
+          <h1 className="review-title">Latest Reviews</h1>
           <div className="review-grid">
             {reviews && reviews.length > 0 ? (
               reviews
