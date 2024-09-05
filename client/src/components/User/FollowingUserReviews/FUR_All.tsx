@@ -34,7 +34,7 @@ const FUR_FrontPage: React.FC = () => {
               <div className="loader"></div>
             ) : (
               <div>
-                <h1 className="review-title">Reviews by followers</h1>
+                <h1 className="fur-review-title">Reviews by followers</h1>
                 <div className="review-grid">
                   {reviews && reviews?.length > 0 ? (
                     reviews

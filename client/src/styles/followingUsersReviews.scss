@@ -12,15 +12,20 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
-  // margin-left: 100px;
+  margin-left: 80px;
 }
 
-.container{
+.fur-list-cont,
+.all-reviews-cont{
   // background-color: #fd0000;
   background: opacity($color: #000);
   backdrop-filter: blur(100px);
-  justify-content: center;
+  display:grid;
+  align-content: center;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   width: 500px;
+  margin-left: 80px;
 }
 
 .following-review-title {
@@ -51,7 +56,8 @@
     }
   }
     
-  .movie-info {
+  .all-review-movie-info,
+  .fur-movie-info {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -82,7 +88,7 @@
       margin-right: 0.2rem;
     }
   
-    .fullname {
+    .user-fullname {
       font-family: 'Avenir';
       font-weight: 500;
       display: flex;
@@ -198,6 +204,8 @@
       justify-content: flex-start;
       margin-left: 5px;
       width: 370px ;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
     }
     
     .following-review-title {

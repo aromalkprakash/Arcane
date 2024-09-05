@@ -59,14 +59,12 @@ const MovieReviews: React.FC<MovieProp> = ({ params }) => {
             <div className="movie-review-page">
                 {loading ? (
                     <div>
-                        <Loading/>
+                        <Loading />
                     </div>
                 ) : (
-                        <div>
-                            <div className="navbar">
-                                <Navbar />
-                            </div>
-                        <div className="">
+                    <div>
+                            <div className="">
+                            <Navbar />
                             <h1 className="review-title">All Reviews</h1>
                             {reviewMovie.length > 0 ? (
         
@@ -87,7 +85,7 @@ const MovieReviews: React.FC<MovieProp> = ({ params }) => {
                             totalPages={totalPages}
                             perPage={perPage}
                             onPageChange={handlePageChange}
-                            movieId={movieId} 
+                            movieId={movieId}
                         />
                     </div>
                     

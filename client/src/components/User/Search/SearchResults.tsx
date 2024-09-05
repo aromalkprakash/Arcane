@@ -63,7 +63,7 @@ const SearchResultsPage: React.FC<SearchResultsPageProps> = ({ query }) => {
                         <>
                             <h2 className="member-heading">Users</h2>
                             {users.length === 0 ? (
-                                <p className="text-center">No users found.</p>
+                                <p className="not-found">No users found.</p>
                             ) : (
                                 <div className="allusers-grid">
                                     {users.map(user => (
@@ -79,7 +79,7 @@ const SearchResultsPage: React.FC<SearchResultsPageProps> = ({ query }) => {
                         <>
                             <h2 className="allfilms-heading">Movies</h2>
                             {movies.length === 0 ? (
-                                <p className="text-center">No movies found.</p>
+                                <p className="not-found">No movies found.</p>
                             ) : (
                                 <div className="allmovies-grid">
                                             

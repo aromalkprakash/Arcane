@@ -59,7 +59,7 @@ const FUR_All_List_page: React.FC<FUR_All_ListProps> = ({ review }) => {
 
   return (
     <div key={review._id} className="review-item">
-      <div className="container px-1 md:px-6">
+      <div className="fur-list-cont">
         <div className="mb-8 md:mb-12"></div>
         <div className="grid gap-6">
           <div className="flex gap-4">
@@ -75,7 +75,7 @@ const FUR_All_List_page: React.FC<FUR_All_ListProps> = ({ review }) => {
                 />
               </div>
             </Link>
-            <div className="movie-info">
+            <div className="fur-movie-info">
               <div className="user-info">
 
                 <Link href={`/profile/${review.user?.username}`}>
@@ -85,7 +85,7 @@ const FUR_All_List_page: React.FC<FUR_All_ListProps> = ({ review }) => {
                 </Link>
               
                 <Link href={`/profile/${review.user?.username}`}>
-                  <h3 className="fullname">{review.user?.fullName}</h3>
+                  <h3 className="user-fullname">{review.user?.fullName}</h3>
                 </Link>
            
               </div>

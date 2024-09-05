@@ -183,7 +183,7 @@ const MovieDetails: React.FC<MovieProp> = ({ params }) => {
         <div>
           <div className="navbar"><Navbar />
           </div>
-      <div className="banner-container">
+      <div className="film-banner-container">
         <Image
           src={bannerImg}
           alt={singleMovie.title}
@@ -202,7 +202,7 @@ const MovieDetails: React.FC<MovieProp> = ({ params }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div className="movie-info">
+        <div className="filmpage-movie-info">
           <h1 className="title-movie" style={{ zIndex: dialogOpen ? 0 : 1 }}>{singleMovie.title}</h1>
     
         <div  className="phone-poster-container">

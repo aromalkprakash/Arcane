@@ -2,7 +2,6 @@
 
 import { getAllReview } from "@/api/reviewUrl";
 import Loading from "@/components/User/Loading/Loading";
-import Front_All_Review_List from "@/components/User/getAllReview/Front_All_Review_List";
 import AllReviewsPaginationControls from "@/components/User/pagination/allReviews";
 import { FReview } from "@/types/type";
 import { useRouter, useSearchParams } from "next/navigation";

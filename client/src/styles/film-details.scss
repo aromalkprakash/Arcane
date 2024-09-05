@@ -14,6 +14,7 @@
 .review-title-div{
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 .review-title{
   font-family: 'Avenir';
@@ -22,6 +23,7 @@
   justify-content: center;
   margin-top: 25px;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .review-grid{
@@ -32,7 +34,7 @@
   justify-content: center;
 }
 
-.banner-container {
+.film-banner-container {
   position: relative;
   width: 100%;
   height: 400px;
@@ -99,11 +101,12 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
      
-      .movie-info {
+      .filmpage-movie-info {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
        margin-left: 30px;
+       color: #fff;
        z-index: 1;
   
         .title-movie {
@@ -138,6 +141,7 @@
           font-weight: 100;
           font-style: italic;
           margin-top: 0.5rem;
+          color: #fff;
           &:hover{
             text-decoration: underline;
           }
@@ -148,12 +152,14 @@
           font-weight: 100;
           font-style: italic;
           margin-top: 0.5rem;
+          color: #fff;
         }
 
 
         .movie-detail-cast{
           min-width: 200px;
           max-width: 400px;
+          color: #fff;
         }
 
         .actor-name {
